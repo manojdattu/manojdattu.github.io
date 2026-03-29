@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manoj Meenakshi Dattatreya | Machine Learning Engineer</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --light-grey: #f8f9fa;
+            --border-color: #e9ecef;
+            --max-width: 850px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+            padding: 40px 20px;
+        }
+
+        .wrapper {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        /* Header Section */
+        .page-header {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .header-main {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--border-color);
+            flex-shrink: 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            flex-grow: 1;
+        }
+
+        .header-name {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .title-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .header-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--accent-color);
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .contact-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.2s;
+        }
+
+        .contact-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .executive-summary {
+            font-size: 1rem;
+            color: #555;
+            max-width: 100%;
+        }
+
+        /* Content Sections */
+        .content-section {
+            margin-bottom: 40px;
+        }
+
+        .section-header {
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+
+        .section-header h2 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Resume Items */
+        .resume-item {
+            margin-bottom: 30px;
+        }
+
+        .resume-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+            flex-wrap: wrap;
+        }
+
+        .resume-item-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .resume-item-company {
+            font-weight: 600;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .resume-item-details {
+            font-size: 0.9rem;
+            color: #777;
+            font-weight: 500;
+        }
+
+        .resume-item-copy {
+            list-style-type: none;
+        }
+
+        .resume-item-copy li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .resume-item-copy li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category h3 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            border-left: 3px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: var(--light-grey);
+            border: 1px solid var(--border-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .page-footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        /* Media Queries */
+        @media (max-width: 600px) {
+            .header-name { font-size: 2rem; }
+            .resume-item-header { flex-direction: column; }
+            .resume-item-details { margin-top: 5px; }
+        }
+
+        @media print {
+            body { padding: 0; }
+            .contact-links a { color: #000; }
+            .wrapper { max-width: 100%; }
+        }
+    </style>
+</head>
+<body itemscope itemtype="http://schema.org/Person">
+
+<div class="wrapper">
+    <!-- Header -->
+    <header class="page-header">
+        <div class="header-main">
+            <img src="https://github.com/manojdattu.png" alt="Manoj Meenakshi Dattatreya" class="avatar" itemprop="image">
+            <div class="header-content">
+                <h1 class="header-name" itemprop="name">Manoj Meenakshi Dattatreya</h1>
+                
+                <div class="title-bar">
+                    <h2 class="header-title" itemprop="jobTitle">Machine Learning Engineer</h2>
+                    <ul class="contact-links">
+                        <li><a href="mailto:manojdattu@gmail.com" title="Email"><i class="fas fa-envelope"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/manojdattu/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://github.com/manojdattu" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
+                        <li><a href="tel:3122861664" title="Phone"><i class="fas fa-phone"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="executive-summary" itemprop="description">
+            <p>Versatile software engineer with ~8 years of experience in dynamic project settings. Empowered by exceptional problem-solving and optimization skills, I drive a proactive approach to collaborative endeavors. I aspire to construct distributed and scalable systems, leveraging my expertise to enhance my skills and make meaningful contributions to the advancement of technology.</p>
+        </div>
+    </header>
+
+    <!-- Skills Section -->
+    <section class="content-section">
+        <header class="section-header">
+            <h2><i class="fas fa-laptop-code"></i> Technical Skills</h2>
+        </header>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Programming</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Go</span>
+                    <span class="skill-tag">Shell Scripting</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">Kotlin</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Cloud & Big Data</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Apache Spark</span>
+                    <span class="skill-tag">Apache Ray</span>
+                    <span class="skill-tag">Hadoop</span>
+                    <span class="skill-tag">Hive</span>
+                    <span class="skill-tag">Trino</span>
+                    <span class="skill-tag">PepperData</span>
+                    <span class="skill-tag">Athena</span>
+                    <span class="skill-tag">AWS Glue</span>
+                    <span class="skill-tag">Superset</span>
+                    <span class="skill-tag">Kafka</span>
+                    <span class="skill-tag">Airflow</span>
+                    <span class="skill-tag">AWS (EMR, S3, EKS)</span>
+                    <span class="skill-tag">Azure</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Infrastructure</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Kubernetes</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Terraform</span>
+                    <span class="skill-tag">CI/CD</span>
+                    <span class="skill-tag">Linux</span>
+                    <span class="skill-tag">BATS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="content-section">
+        <header class="section-header">
+            <h2><i class="fas fa-briefcase"></i> Experience</h2>
+        </header>
+
+        <div class="resume-item" itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+            <div class="resume-item-header">
+                <span class="resume-item-title">Machine Learning Engineer</span>
+                <span class="resume-item-details">May 2018 — Present</span>
+            </div>
+            <div class="resume-item-company">
+                <i class="fab fa-apple"></i> <span itemprop="name">Apple Inc. - Apple Ads</span>
+            </div>
+            <ul class="resume-item-copy">
+                <li>Machine Learning Engineer at Apple Ads, specializing in model inferencing, feature store & engineering, and high-scale model deployments.</li>
+            </ul>
+        </div>
+
+        <div class="resume-item">
+            <div class="resume-item-header">
+                <span class="resume-item-title">Senior Software Engineer</span>
+                <span class="resume-item-details">May 2018 — March 2024</span>
+            </div>
+            <div class="resume-item-company">
+                <i class="fas fa-chart-line"></i> AppDynamics (Cisco Systems)
+            </div>
+            <ul class="resume-item-copy">
+                <li>Founding member of Agent Installer, simplifying customer experience for APM agent fleet management.</li>
+                <li>Designed public-facing REST APIs for install, upgrade, and rollback of monitoring agents.</li>
+                <li>Utilized Terraform to establish infrastructure on AWS/Azure, reducing long-running costs by 70%.</li>
+                <li>Built robust CI/CD pipelines for Kubernetes service deployment across multiple regions.</li>
+            </ul>
+        </div>
+
+        <div class="resume-item">
+            <div class="resume-item-header">
+                <span class="resume-item-title">Software Engineer in Test</span>
+                <span class="resume-item-details">Feb 2016 — May 2018</span>
+            </div>
+            <div class="resume-item-company">
+                <i class="fas fa-folder-tree"></i> iManage LLC
+            </div>
+            <ul class="resume-item-copy">
+                <li>Automated test scenarios for Mobile, Desktop, and Web clients using Python and Selenium, reducing manual effort by 60%.</li>
+                <li>Supported 3 major GA releases by managing bug evaluation and regression for 300+ customers.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="content-section" itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+        <header class="section-header">
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+        </header>
+        <div class="resume-item">
+            <div class="resume-item-header">
+                <span class="resume-item-title">Master of Computer Science</span>
+                <span class="resume-item-details">Dec 2015</span>
+            </div>
+            <div class="resume-item-company"><span itemprop="name">Illinois Institute of Technology (IIT), Chicago</span></div>
+            <p class="resume-item-details">GPA: 3.30/4.00</p>
+        </div>
+        <div class="resume-item">
+            <div class="resume-item-header">
+                <span class="resume-item-title">Bachelor of Engineering in Computer Science</span>
+                <span class="resume-item-details">May 2013</span>
+            </div>
+            <div class="resume-item-company">Visveswaraiah Technological University (VTU), India</div>
+            <p class="resume-item-details">GPA: 3.56/4.00</p>
+        </div>
+    </section>
+
+    <footer class="page-footer">
+        <p>Manoj Meenakshi Dattatreya &copy; 2026</p>
+    </footer>
+</div>
+
+</body>
+</html>
